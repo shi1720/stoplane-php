@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite the associated StopLane manuscript when using this research artifact."
+title: "StopLane: Cancellation Admission and Observation in PHP Streaming Gateways"
+type: software
+authors:
+  - family-names: Gupta
+    given-names: Shivam
+version: 1.0.0
+date-released: 2026-10-14
+license: MIT
+repository-code: "https://github.com/shi1720/stoplane-php"
