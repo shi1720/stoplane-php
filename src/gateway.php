@@ -44,6 +44,8 @@ if ($action === 'cancel') {
     // An immutable marker makes repeat requests idempotent. IDs are never reused.
     $f = @fopen("$root/$id.cancel", 'x');
     if ($f !== false) { fwrite($f, 'cancel'); fclose($f); }
+    clearstatcache(true, "$root/$id.cancel");
+    if (!is_file("$root/$id.cancel")) { http_response_code(503); exit; }
     event($id, 'cancel_published');
     header('Content-Type: application/json'); echo '{"accepted":true}'; exit;
 }

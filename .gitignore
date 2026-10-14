@@ -5,3 +5,4 @@ paper/*.log
 paper/*.out
 results/pilot.jsonl
 results/smoke.jsonl
+vendor/

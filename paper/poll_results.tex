@@ -1,0 +1,8 @@
+\begin{table}[ht]\centering\small\begin{tabular}{@{}rrrr@{}}\toprule Wait (ms) & Gateway median (ms) & Gateway range (ms) & Checks, median\\\midrule
+5 & 5.7 & 2.2--6.7 & 29.0 \\
+10 & 7.9 & 3.9--10.7 & 17.0 \\
+20 & 11.9 & 9.2--16.5 & 11.0 \\
+50 & 19.0 & 16.3--21.0 & 7.0 \\
+100 & 66.5 & 65.1--70.9 & 6.0 \\
+\bottomrule\end{tabular}\caption{Secondary polling sweep: ten saturated-silent trials per setting with release and reservation enabled. Check counts include timer and body-callback checks, not measured CPU utilization.}\label{tab:poll}\end{table}
+The timer sweep in Table~\ref{tab:poll} exposes the observation-latency tradeoff without treating the configured wait as a strict deadline. Cancellation occurs at a fixed offset after readiness; phase alignment means median latency need not increase monotonically with the wait. Check counts describe application observation frequency, not CPU overhead or an optimal production interval.

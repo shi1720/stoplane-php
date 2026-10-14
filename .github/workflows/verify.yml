@@ -1,0 +1,16 @@
+name: Verify retained research artifact
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Independently verify saved experiments
+        run: python3 bench/verify.py
+      - name: Check PHP syntax
+        run: |
+          php -l src/gateway.php
+          php -l src/symfony_gateway.php

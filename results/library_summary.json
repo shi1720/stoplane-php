@@ -1,0 +1,49 @@
+{
+  "cells": [
+    {
+      "driver": "symfony",
+      "release": true,
+      "reserve": true,
+      "n": 10,
+      "cancelled": 10,
+      "median_ms": 15.54107666015625,
+      "min_ms": 11.026144027709961,
+      "max_ms": 19.868135452270508
+    },
+    {
+      "driver": "symfony",
+      "release": false,
+      "reserve": true,
+      "n": 10,
+      "cancelled": 0,
+      "median_ms": 1272.4509239196777,
+      "min_ms": 1268.5439586639404,
+      "max_ms": 1275.6259441375732
+    },
+    {
+      "driver": "symfony",
+      "release": true,
+      "reserve": false,
+      "n": 10,
+      "cancelled": 1,
+      "median_ms": 1273.0679512023926,
+      "min_ms": 1264.7628784179688,
+      "max_ms": 1281.588077545166
+    },
+    {
+      "driver": "curl",
+      "release": true,
+      "reserve": true,
+      "n": 10,
+      "cancelled": 10,
+      "median_ms": 11.884450912475586,
+      "min_ms": 10.682106018066406,
+      "max_ms": 15.021085739135742
+    }
+  ],
+  "symfony_minus_curl_median_ms": 2.3044347763061523,
+  "bootstrap95": [
+    -0.10609626770019531,
+    4.847049713134766
+  ]
+}

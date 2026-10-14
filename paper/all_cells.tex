@@ -1,0 +1,38 @@
+\begin{table}[ht]\centering\small\begin{tabular}{@{}lccc r r r@{}}
+\toprule Output & Release & Reserve & Timer & Observed & Publish (ms) & Gateway (ms)\\\midrule
+regular & 0 & 0 & 0 & 0/10 & 1271.6 & 1270.9 \\
+regular & 0 & 0 & 1 & 0/10 & 1270.8 & 1270.4 \\
+regular & 0 & 1 & 0 & 0/10 & 1270.2 & 1269.6 \\
+regular & 0 & 1 & 1 & 0/10 & 1273.9 & 1272.8 \\
+regular & 1 & 0 & 0 & 10/10 & 1.5 & 12.7 \\
+regular & 1 & 0 & 1 & 10/10 & 1.5 & 8.2 \\
+regular & 1 & 1 & 0 & 10/10 & 1.4 & 12.0 \\
+regular & 1 & 1 & 1 & 10/10 & 1.4 & 8.0 \\
+silent & 0 & 0 & 0 & 0/10 & 1273.4 & 1272.5 \\
+silent & 0 & 0 & 1 & 0/10 & 1275.4 & 1274.9 \\
+silent & 0 & 1 & 0 & 0/10 & 1270.2 & 1269.4 \\
+silent & 0 & 1 & 1 & 0/10 & 1274.5 & 1273.7 \\
+silent & 1 & 0 & 0 & 10/10 & 2.0 & 774.8 \\
+silent & 1 & 0 & 1 & 10/10 & 1.8 & 11.4 \\
+silent & 1 & 1 & 0 & 10/10 & 1.5 & 772.2 \\
+silent & 1 & 1 & 1 & 10/10 & 1.7 & 13.5 \\
+\bottomrule\end{tabular}\caption{Complete factorial cells with 2 offered streams. Latencies are cell medians; each row contains ten trials. The full CSV additionally reports ranges, provider termination, work ticks and check counts.}\end{table}
+\begin{table}[ht]\centering\small\begin{tabular}{@{}lccc r r r@{}}
+\toprule Output & Release & Reserve & Timer & Observed & Publish (ms) & Gateway (ms)\\\midrule
+regular & 0 & 0 & 0 & 0/10 & 1273.1 & 1271.2 \\
+regular & 0 & 0 & 1 & 0/10 & 1270.7 & 1269.9 \\
+regular & 0 & 1 & 0 & 0/10 & 1272.0 & 1271.4 \\
+regular & 0 & 1 & 1 & 0/10 & 1269.9 & 1269.5 \\
+regular & 1 & 0 & 0 & 0/10 & 1269.4 & 1268.3 \\
+regular & 1 & 0 & 1 & 0/10 & 1270.2 & 1268.4 \\
+regular & 1 & 1 & 0 & 10/10 & 1.5 & 12.1 \\
+regular & 1 & 1 & 1 & 10/10 & 1.6 & 8.1 \\
+silent & 0 & 0 & 0 & 0/10 & 1270.4 & 1269.3 \\
+silent & 0 & 0 & 1 & 0/10 & 1274.4 & 1273.6 \\
+silent & 0 & 1 & 0 & 0/10 & 1272.5 & 1271.7 \\
+silent & 0 & 1 & 1 & 0/10 & 1274.3 & 1273.9 \\
+silent & 1 & 0 & 0 & 0/10 & 1272.0 & 1271.1 \\
+silent & 1 & 0 & 1 & 0/10 & 1272.5 & 1271.5 \\
+silent & 1 & 1 & 0 & 10/10 & 1.5 & 770.4 \\
+silent & 1 & 1 & 1 & 10/10 & 2.4 & 11.9 \\
+\bottomrule\end{tabular}\caption{Complete factorial cells with 3 offered streams. Latencies are cell medians; each row contains ten trials. The full CSV additionally reports ranges, provider termination, work ticks and check counts.}\end{table}

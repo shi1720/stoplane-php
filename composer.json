@@ -1,0 +1,7 @@
+{
+  "name": "shi1720/stoplane-php",
+  "description": "Reproducible cancellation-admission benchmark for PHP streaming gateways",
+  "type": "project",
+  "license": "MIT",
+  "require": {"php": ">=8.4", "ext-curl": "*", "symfony/http-client": "8.1.*"}
+}

@@ -1,0 +1,8 @@
+{
+  "php": "PHP 8.4.26 (cli) (built: Sep 22 2026 15:00:02) (NTS)",
+  "nginx": "nginx version: nginx/1.31.6",
+  "python": "3.9.6",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "curl": "{\"version_number\":529920,\"age\":11,\"features\":1472137101,\"feature_list\":{\"AsynchDNS\":true,\"CharConv\":false,\"Debug\":false,\"GSS-Negotiate\":false,\"IDN\":true,\"IPv6\":true,\"krb4\":false,\"Largefile\":true,\"libz\":true,\"NTLM\":false,\"NTLMWB\":false,\"SPNEGO\":true,\"SSL\":true,\"SSPI\":false,\"TLS-SRP\":false,\"HTTP2\":true,\"GSSAPI\":true,\"KERBEROS5\":true,\"UNIX_SOCKETS\":true,\"PSL\":true,\"HTTPS_PROXY\":true,\"MULTI_SSL\":false,\"BROTLI\":true,\"ALTSVC\":true,\"HTTP3\":true,\"UNICODE\":false,\"ZSTD\":true,\"HSTS\":true,\"GSASL\":false},\"ssl_version_number\":0,\"version\":\"8.22.0\",\"host\":\"aarch64-apple-darwin27.0.0\",\"ssl_version\":\"OpenSSL\\/4.0.3\",\"libz_version\":\"1.2.12\",\"protocols\":[\"dict\",\"file\",\"ftp\",\"ftps\",\"gopher\",\"gophers\",\"http\",\"https\",\"imap\",\"imaps\",\"ldap\",\"ldaps\",\"mqtt\",\"mqtts\",\"pop3\",\"pop3s\",\"rtsp\",\"scp\",\"sftp\",\"smtp\",\"smtps\",\"telnet\",\"tftp\",\"ws\",\"wss\"],\"ares\":\"\",\"ares_num\":0,\"libidn\":\"\",\"iconv_ver_num\":0,\"libssh_version\":\"libssh2\\/1.11.1\",\"brotli_ver_num\":16785408,\"brotli_version\":\"brotli\\/1.2.0\"}",
+  "cpu": "Apple M4 Pro"
+}

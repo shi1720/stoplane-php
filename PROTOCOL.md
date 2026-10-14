@@ -30,3 +30,7 @@ Ten otherwise identical uncooperative-upstream trials: provider continues its 1.
 ## Scope
 
 Single host, loopback, native PHP file sessions, nginx/FPM and libcurl. No model-quality, GPU-memory, token billing, framework-prevalence, or automatic browser-disconnect claims. The conditional latency bound assumes bounded control admission, bounded lock waiting, bounded poll opportunities and cooperative upstream reaction. Saturation of the control pool or its backing store invalidates a bound that assumes bounded admission.
+
+## Library extension (specified before extension collection)
+
+Symfony HttpClient v8.1.9, exact dependencies in composer.lock. Forty new trials, ten randomized blocks: Symfony with all controls enabled; Symfony without session release; Symfony without control reservation; direct cURL with all controls enabled. Three offered streams, silent provider, 20 ms timed stream wait. Symfony consumes timeout chunks, restarts stream observation and calls response.cancel() when a marker is visible. Each block uses a fresh isolated stack; seed 271828. Measure the same events and outcomes. Do not pool these trials into the primary factorial. The extension tests whether the contract can be satisfied by an existing client, not whether a new client outperforms it.

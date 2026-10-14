@@ -1,0 +1,41 @@
+{
+  "venue": "PHP Tek 2027",
+  "submission_url": "https://sessionize.com/php-tek-2027/",
+  "author": "Shivam Gupta",
+  "deadline": "2026-10-31 23:59 America/Chicago",
+  "eligibility_basis": "Public CFP has no degree, academic affiliation or prior-publication requirement. It requests practical presentation ideas, level and prerequisites. Speaker acceptance, travel routing and entry requirements remain organizer/applicant matters.",
+  "submission_kind": "Speaker proposals; the paper is a supporting artifact, not a paper-track submission.",
+  "proposals": [
+    {
+      "title": "Your Stop Button Is Queued: Making PHP Streaming Cancellation Work",
+      "level": "Intermediate (some prior knowledge necessary)",
+      "length": "Standard (50 minutes)",
+      "track": "PHP",
+      "description": "Your stop button can become another request waiting behind the work it is supposed to stop. In a PHP streaming gateway, releasing a session lock, reserving a worker and checking a cancellation flag solve three different problems. During an upstream silence, checking only between response chunks can leave the gateway waiting long after the user clicks Stop.\n\nWe will reproduce these failures in an nginx/PHP-FPM lab, then build an authenticated cancellation path using native PHP and cURL. We will repeat the observation step with Symfony HttpClient's existing timeout-aware streaming API. The demonstrations distinguish accepting a stop request, terminating the gateway and actually stopping upstream work.\n\nThe supporting study contains 320 randomized factorial trials, 60 polling/cooperation controls and a separate 40-trial Symfony comparison. Results are measured against a controlled HTTP provider; they are not claims about GPU performance or token billing. The session-lock demonstration uses native PHP sessions, and we will explain why Laravel's default session concurrency must be assessed separately.\n\nAttendees leave with a worker-pool configuration pattern, generation-scoped cancellation checks and a reproducible test for saturation and silent responses. Audience: PHP developers building chat, report generation or other long-running API integrations. Prerequisites: PHP sessions, basic HTTP streaming and familiarity with PHP-FPM. No paid model API or GPU is needed.\n\nCode, raw traces and supporting research manuscript: https://github.com/shi1720/stoplane-php",
+      "outline_minutes": {
+        "failure_demo": 8,
+        "session_and_pool_dependencies": 12,
+        "timed_curl_and_symfony": 13,
+        "provider_termination_and_measurements": 10,
+        "deployment_tradeoffs_and_questions": 7
+      }
+    },
+    {
+      "title": "Chaos-Test PHP Streams: Build a Cancellation Lab",
+      "level": "Intermediate (some prior knowledge necessary)",
+      "length": "Tutorial (3 hours)",
+      "track": "DevOps",
+      "description": "A streaming endpoint that passes a happy-path test can still be impossible to stop under load. In this hands-on tutorial, participants build a local cancellation test lab around nginx, PHP-FPM and a controlled HTTP/SSE provider. We will inject occupied worker pools, native session locks, silent upstream periods and a provider that keeps working after its socket closes.\n\nStarting from the open-source StopLane artifact, we will change one control at a time, inspect the event traces and identify whether delay occurs before cancellation is admitted or after its marker is published. We will implement timer-driven cURL observation, compare it with Symfony HttpClient, and test ownership, CSRF, repeated stop requests and late cancellation of an old generation. We will finish by producing a small latency table and a regression test suitable for a team's own gateway.\n\nThe lab makes resource tradeoffs explicit: a reserved control worker comes out of the same worker budget as streaming work. It also teaches why a successful HTTP response does not prove that an upstream provider stopped or refunded anything. A 420-trial supporting research artifact supplies measured examples and the full methodology.\n\nAudience: intermediate PHP developers and operations engineers responsible for remote API integrations. Bring a laptop with PHP 8.4+ and curl, PHP-FPM, nginx, Python 3.9+ and Composer installed. Setup instructions and a preflight check will be provided in advance. No GPU, paid model API or proprietary service is required. Prior knowledge: basic PHP, HTTP requests, command-line tools and elementary web-server configuration.\n\nLab code and supporting manuscript: https://github.com/shi1720/stoplane-php",
+      "outline_minutes": {
+        "preflight_and_trace_model": 20,
+        "session_lock_experiment": 30,
+        "worker_pool_experiment": 30,
+        "upstream_silence_experiment": 25,
+        "symfony_comparison": 25,
+        "authorization_and_generation_tests": 20,
+        "provider_cooperation_and_report": 20,
+        "review_and_questions": 10
+      }
+    }
+  ]
+}

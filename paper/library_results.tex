@@ -1,0 +1,7 @@
+\begin{table}[ht]\centering\small\begin{tabular}{@{}lccrrr@{}}\toprule Client & Release & Reserve & Observed & Gateway (ms) & Range (ms)\\\midrule
+symfony & 1 & 1 & 10/10 & 15.5 & 11.0--19.9 \\
+symfony & 0 & 1 & 0/10 & 1272.5 & 1268.5--1275.6 \\
+symfony & 1 & 0 & 1/10 & 1273.1 & 1264.8--1281.6 \\
+curl & 1 & 1 & 10/10 & 11.9 & 10.7--15.0 \\
+\bottomrule\end{tabular}\caption{Separate Symfony v8.1.9 extension: three offered streams, silent provider and 20 ms timed observation; ten randomized blocks.}\label{tab:library}\end{table}
+Symfony's documented timeout-aware stream and response cancellation satisfy the same observation contract when release and reservation are enabled: 10/10 trials observe cancellation, with median termination 15.5 ms. Without release, no trial records observation. Without reservation, one of ten trials records a late observation after the provider has already ended naturally; all ten gateway lifetimes remain above one second. Thus an observed marker can also arrive too late to interrupt work. This completion race reinforces the need to inspect provider events as well as the gateway flag. The paired median Symfony-minus-direct-cURL difference is 2.3 ms, with descriptive bootstrap interval [-0.1, 4.8] ms. This small integration comparison provides no basis for claiming that StopLane's direct client is superior to Symfony. It supports the broader interpretation: a mature client solves observation opportunities, while deployment controls must also solve admission.

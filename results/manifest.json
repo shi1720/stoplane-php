@@ -1,0 +1,30 @@
+{
+  "raw_sha256": "c6b9fa5b00199bdc8e70218d9f4313df04ed0ae64777463c201a9faba84932a7",
+  "primary_source_commit": "b685e41",
+  "trials": 380,
+  "primary_trials": 320,
+  "seed": 1720406,
+  "bootstrap_seed": 20406,
+  "macros": {
+    "GoodGateway": 11.857390403747559,
+    "GoodGatewayMax": 15.915870666503906,
+    "GoodProvider": 22.121906280517578,
+    "GoodAdmission": 2.3545026779174805,
+    "BaselineGateway": 1269.3414688110352,
+    "CallbackGateway": 770.423412322998,
+    "UncoopProvider": 1272.5985050201416,
+    "UncoopGateway": 12.634038925170898,
+    "SavedTicks": 88.79310344827587
+  },
+  "files_sha256": {
+    "results/raw.jsonl": "c6b9fa5b00199bdc8e70218d9f4313df04ed0ae64777463c201a9faba84932a7",
+    "results/library.jsonl": "ecc05468b4f5db2eb711b0e70b335a221be095c6501374f3602a59ead88ff713",
+    "results/authorization.json": "bcfd83757d36a76064052f369cc4822a4818d950583c5292e0617cae5e3a4eaf",
+    "composer.lock": "987524fd5f13b2a72148619c9df04e1ff2ce4d3e89671b962697a74bbdb12d08",
+    "src/gateway.php": "a4859d64f3c99a331c9b7df71b55ecb6deaaabcc5249e426d0e4e2c7ae380279",
+    "src/symfony_gateway.php": "00582baaeaa4ca37f5da9974e0579d0f69f73fe820629bbcebbae0dc9301c6a1"
+  },
+  "library_trials": 40,
+  "paper_sha256": "49f6d31ab3ba3012ab9c51b6ded6fd65997398f2e9936cd99e2f988aef566cd8",
+  "post_collection_guard": "HTTP 503 on failed marker publication; separately injected-failure tested; successful path unchanged."
+}

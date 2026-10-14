@@ -1,0 +1,18 @@
+{
+  "assertions": 12,
+  "checks": [
+    "malformed ID rejected",
+    "unknown ID rejected",
+    "cross-session cancellation rejected",
+    "wrong CSRF rejected",
+    "missing CSRF rejected",
+    "rejections do not publish marker",
+    "publication failure is not acknowledged",
+    "repeated cancellation accepted",
+    "authorized cancellation observed",
+    "duplicate generation rejected",
+    "late old-generation cancel does not mark new generation",
+    "new generation completes independently"
+  ],
+  "passed": true
+}
